@@ -12,7 +12,7 @@ const Signup = () => {
 
   const addHandler = ()=>{
     console.log("clicked",users);
-    axios.post("http://localhost:3000/api",users)
+    axios.post("https://ict-blog-app-server.vercel.app/api",users)
     .then((res)=>{
       console.log(res);
       alert(res.data.message);

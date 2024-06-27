@@ -14,7 +14,7 @@ const Login = () => {
 
   const addHandler = () => {
     console.log(user);
-    axios.post("http://localhost:3000/api/login",user)
+    axios.post("https://ict-blog-app-server.vercel.app/api/login",user)
     .then((res)=>{
       alert(res.data.message);
       sessionStorage.setItem('userToken',res.data.token);
