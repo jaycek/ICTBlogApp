@@ -17,6 +17,12 @@ app.use(express.static(path.join(__dirname,'/build')));
 app.use(morgan('dev'));
 app.use(cors());
 
+app.use(cors({
+    origin: ['https://ict-blog-app-client.vercel.app'],
+    credentials: true,
+    methods: ['POST', 'GET']
+  }));
+
 app.use('/api',userRoute)
 app.use('/blog',postroute);
 
