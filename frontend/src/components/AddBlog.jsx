@@ -12,7 +12,7 @@ const AddBlog = () => {
   const addData = () => {
     console.log(post);
     axiosInstance
-      .post("https://ict-blog-app-server.vercel.app/blog/add", post)
+      .post("/blog/add", post)
       .then((res) => {
         alert(res.data.message);
       })

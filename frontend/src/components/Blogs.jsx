@@ -7,7 +7,7 @@ const Blogs = () => {
   const [cardData,setData]=useState([]);
   // const navigate=useNavigate();
     useEffect( ()=>{
-      axiosInstance.get('https://ict-blog-app-server.vercel.app/blog/blogs').then((res)=>{
+      axiosInstance.get('/blog/blogs').then((res)=>{
        console.log(res)
       setData(...cardData,res.data);
      })
